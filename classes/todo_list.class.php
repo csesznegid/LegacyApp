@@ -17,7 +17,7 @@ class TodoList
 
         $mySQLResult       = mysql_query(" SELECT * FROM todo " . $limitStr);
         $this->queryResult = array();
-        while($row = mysql_fetch_assoc($mySQLResult)) {
+        while ($row = mysql_fetch_assoc($mySQLResult)) {
             array_push($this->queryResult, $row);
         }
     }
