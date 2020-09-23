@@ -2,7 +2,7 @@
 This package has been created to demonstrate how to work with Legacy Code.
 
 ### System requirements
-* PHP >=5.3 <5.5
+* PHP >=5.5
 * MySQL >=5.0 <=5.5
 
 ### Coding Standards and Conventions
