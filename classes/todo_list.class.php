@@ -4,9 +4,9 @@ require_once(dirname(__FILE__) . '/../constants/constants.php');
 
 class TodoList
 {
-    var $queryResult;
+    private $queryResult;
 
-    function TodoList($limit = 0)
+    public function TodoList($limit = 0)
     {
         if ($limit == 0) {
             $limitStr = "";
@@ -22,7 +22,7 @@ class TodoList
         }
     }
 
-    function render()
+    public function render()
     {
         loadTodoConstants();
         $template    = file_get_contents(dirname(__FILE__) . "/../view/todo.html");
