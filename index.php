@@ -1,4 +1,4 @@
-<?
+<?php
 
 require_once(dirname(__FILE__) . "/database/connect.php");
 require_once(dirname(__FILE__) . "/classes/todo_list.class.php");
