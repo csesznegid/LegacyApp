@@ -1,5 +1,7 @@
 <?
 
+require_once(dirname(__FILE__) . '/../constants/constants.php');
+
 class TodoList
 {
     var $queryResult;
@@ -22,10 +24,11 @@ class TodoList
 
     function render()
     {
+        loadTodoConstants();
         $template    = file_get_contents(dirname(__FILE__) . "/../view/todo.html");
         $todoContent = "<ol>";
         for ($i = 0; $i < count($this->queryResult); $i++) {
-            if ($this->queryResult[$i]["id"] == 2) {
+            if ($this->queryResult[$i]["id"] == TODO_ATTENDANCE) {
                 $cssClass = "purple-bold";
             }
             else {
