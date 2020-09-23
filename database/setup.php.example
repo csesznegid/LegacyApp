@@ -1,0 +1,20 @@
+<?
+
+$settings = new stdClass();
+
+// Dev/Test
+if ($_SERVER["REMOTE_ADDR"] == "::1") {
+    $settings->host     = "localhost";
+    $settings->user     = "root";
+    $settings->password = "";
+    $settings->database = "legacy_app_db";
+}
+// Production
+else {
+    $settings->host     = "127.0.0.1";
+    $settings->user     = "webroot";
+    $settings->password = "webroot-password";
+    $settings->database = "legacy_app_db";
+}
+
+?>
