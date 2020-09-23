@@ -6,7 +6,7 @@ class TodoList
 {
     private $queryResult;
 
-    public function TodoList($limit = 0)
+    public function __construct($limit = 0)
     {
         if ($limit == 0) {
             $limitStr = "";
