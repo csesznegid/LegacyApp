@@ -13,5 +13,3 @@ else {
 $todoList->render();
 
 require_once("./database/close.php");
-
-?>

@@ -16,5 +16,3 @@ else {
     $settings->password = "webroot-password";
     $settings->database = "legacy_app_db";
 }
-
-?>
