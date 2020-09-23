@@ -19,6 +19,25 @@ class TodoList
             array_push($this->queryResult, $row);
         }
     }
+
+    function render()
+    {
+        $template    = file_get_contents(dirname(__FILE__) . "/../view/todo.html");
+        $todoContent = "<ol>";
+        for ($i = 0; $i < count($this->queryResult); $i++) {
+            if ($this->queryResult[$i]["id"] == 2) {
+                $cssClass = "purple-bold";
+            }
+            else {
+                $cssClass = "red";
+            }
+            $todoContent = $todoContent . sprintf('<li class="%s">', $cssClass) . $this->queryResult[$i]["task"] . "</li>";
+        }
+        $todoContent = $todoContent . "</ol>";
+        $template    = str_replace("<(todo_content)>", $todoContent, $template);
+
+        print_r($template);
+    }
 }
 
 ?>
