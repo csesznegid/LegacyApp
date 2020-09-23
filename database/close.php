@@ -1,4 +1,4 @@
 <?php
 
 global $db;
-mysql_close($db);
+mysqli_close($db);

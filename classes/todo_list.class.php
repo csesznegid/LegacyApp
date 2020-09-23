@@ -8,6 +8,7 @@ class TodoList
 
     public function __construct($limit = 0)
     {
+        global $db;
         if ($limit == 0) {
             $limitStr = "";
         }
@@ -15,9 +16,9 @@ class TodoList
             $limitStr = " LIMIT " . $limit;
         }
 
-        $mySQLResult       = mysql_query(" SELECT * FROM todo " . $limitStr);
+        $mySQLResult       = mysqli_query($db, " SELECT * FROM todo " . $limitStr);
         $this->queryResult = array();
-        while ($row = mysql_fetch_assoc($mySQLResult)) {
+        while ($row = mysqli_fetch_assoc($mySQLResult)) {
             array_push($this->queryResult, $row);
         }
     }
